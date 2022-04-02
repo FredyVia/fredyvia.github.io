@@ -20,26 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"fredyvia.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="FredyVia 的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="FredyVia&#39;s Zone">
-<meta property="og:url" content="https://fredyvia.github.io/archives/2020/03/index.html">
+    <meta name="description" content="网盘cloudreve转nextcloud无限302，service worker导致的问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="chrome service worker">
+<meta property="og:url" content="https://fredyvia.github.io/2022/04/03/nextcloud/index.html">
 <meta property="og:site_name" content="FredyVia&#39;s Zone">
-<meta property="og:description" content="FredyVia 的个人博客">
+<meta property="og:description" content="网盘cloudreve转nextcloud无限302，service worker导致的问题">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-04-02T16:00:00.000Z">
 <meta property="article:author" content="FredyVia">
 <meta property="article:tag" content="个人博客">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://fredyvia.github.io/archives/2020/03/">
+<link rel="canonical" href="https://fredyvia.github.io/2022/04/03/nextcloud/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2020/03/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://fredyvia.github.io/2022/04/03/nextcloud/","path":"2022/04/03/nextcloud/","title":"chrome service worker"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | FredyVia's Zone</title>
+<title>chrome service worker | FredyVia's Zone</title>
   
 
 
@@ -66,7 +68,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">FredyVia's Zone</h1>
+      <p class="site-title">FredyVia's Zone</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">不知所云</p>
@@ -95,7 +97,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -108,6 +110,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">解决</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -153,49 +156,93 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 6 篇日志。 继续努力。</span>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://fredyvia.github.io/2022/04/03/nextcloud/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FredyVia">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FredyVia's Zone">
+      <meta itemprop="description" content="FredyVia 的个人博客">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="chrome service worker | FredyVia's Zone">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          chrome service worker
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-03 00:00:00" itemprop="dateCreated datePublished" datetime="2022-04-03T00:00:00+08:00">2022-04-03</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>网盘<code>cloudreve</code>转<code>nextcloud</code>无限302，<code>service worker</code>导致的问题</p>
+<span id="more"></span>
+<h1>问题</h1>
+<p>同样服务器、同样域名、同样客户端浏览器，由于之前<code>cloudreve</code>支持<code>service worker</code>，<code>nextcloud</code>不支持<code>service worker</code>，导致<code>service worker</code>与服务器交互时发送请求当成普通请求重定向到登录界面，登录界面需要加载js文件，该js文件通过<code>service worker</code>请求服务器获取，就像这样<code>http://host/index.html?__WB_REVISION__=????</code>，致此循环开始了！</p>
+<h1>解决</h1>
+<p>在这里面<code>chrome://serviceworker-internals/?devtools</code>unregister掉该站点的<code>service worker</code>就可以了</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-03-28T00:00:00+08:00"
-              content="2020-03-28">
-          03-28
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/03/28/2020-3/" itemprop="url">
-            <span itemprop="name">2020-3</span>
-          </a>
-      </div>
+    <footer class="post-footer">
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/02/18/2022-2/" rel="prev" title="2022-2">
+                  <i class="fa fa-chevron-left"></i> 2022-2
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
 
 </div>
   </main>
